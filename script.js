@@ -9,3 +9,20 @@ function generatePin(){
     const code = document.getElementById('pin-code');
     code.value = pin;    
 }
+
+const numberContainer = document.getElementsByClassName('cal-buttons')[0];
+numberContainer.addEventListener('click', buttonFunction);
+function buttonFunction(){
+    const evtValue = event.target.innerText;
+    const userInput = document.getElementById('user-input');
+
+    if(evtValue.length == 1){
+        if(evtValue == 'C'){
+            userInput.value = "";
+        }
+        else{
+            userInput.value = userInput.value + event.target.innerText;
+        }
+
+    }
+}

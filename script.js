@@ -6,5 +6,6 @@ function generatePin(){
     for (let i = 2; i < 6; i++) {
         pin += number[i];
     }
-    console.log(pin);    
+    const code = document.getElementById('pin-code');
+    code.value = pin;    
 }

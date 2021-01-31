@@ -15,13 +15,15 @@ numberContainer.addEventListener('click', buttonFunction);
 function buttonFunction(){
     const evtValue = event.target.innerText;
     const userInput = document.getElementById('user-input');
-
     if(evtValue.length == 1){
         if(evtValue == 'C'){
             userInput.value = "";
         }
+        else if(evtValue == '<'){
+            userInput.value = userInput.value.slice(0, userInput.value.length-1);
+        }
         else{
-            userInput.value = userInput.value + event.target.innerText;
+            userInput.value = userInput.value + evtValue;
         }
 
     }

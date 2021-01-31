@@ -7,7 +7,11 @@ function generatePin(){
         pin += number[i];
     }
     const code = document.getElementById('pin-code');
-    code.value = pin;    
+    code.value = pin;
+    const notify = document.getElementsByClassName('notify');
+    notify[1].style.display = 'none';
+    notify[0].style.display = 'none';
+
 }
 
 const numberContainer = document.getElementsByClassName('cal-buttons')[0];
@@ -25,6 +29,21 @@ function buttonFunction(){
         else{
             userInput.value = userInput.value + evtValue;
         }
-
     }
+}
+
+const submit = document.getElementById('submit-button');
+submit.addEventListener('click', calculate);
+function calculate(){
+    const userInput = document.getElementById('user-input').value;
+    const code = document.getElementById('pin-code').value;
+    const notify = document.getElementsByClassName('notify');
+    if(code.length == 4 && code==userInput){
+        notify[1].style.display = 'block';
+        notify[0].style.display = 'none';
+    }
+    else{
+        notify[0].style.display = 'block';
+        notify[1].style.display = 'none';
+    }   
 }

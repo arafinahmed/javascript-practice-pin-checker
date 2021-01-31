@@ -1,5 +1,3 @@
-const generate = document.getElementsByClassName('generate-btn')[0];
-generate.addEventListener('click', generatePin);
 function generatePin(){
     var number = Math.random().toFixed(10);
     let pin = '';
@@ -14,8 +12,6 @@ function generatePin(){
 
 }
 
-const numberContainer = document.getElementsByClassName('cal-buttons')[0];
-numberContainer.addEventListener('click', buttonFunction);
 function buttonFunction(){
     const evtValue = event.target.innerText;
     const userInput = document.getElementById('user-input');
@@ -32,8 +28,6 @@ function buttonFunction(){
     }
 }
 
-const submit = document.getElementById('submit-button');
-submit.addEventListener('click', calculate);
 function calculate(){
     const userInput = document.getElementById('user-input').value;
     const code = document.getElementById('pin-code').value;

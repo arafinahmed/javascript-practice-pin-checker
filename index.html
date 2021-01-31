@@ -13,7 +13,7 @@
             <div class="col-md-6">
                 <div class="pin-generator half-width">
                     <input id="pin-code" class="form-control" type="text">
-                    <button class="generate-btn">Generate Pin</button>
+                    <button onclick="generatePin();" class="generate-btn">Generate Pin</button>
                 </div>
             </div>
             <div class="col-md-6">
@@ -21,7 +21,7 @@
                     <input id="user-input" class="form-control" type="text">
                     <div class="numbers">
                         <div class="calc-body">
-                            <div class="cal-buttons">
+                            <div onclick="buttonFunction();" class="cal-buttons">
                                 <div class="calc-button-row">
                                     <div class="button">7</div>
                                     <div class="button">8</div>
@@ -44,7 +44,7 @@
                                   </div>
                             </div>
                             <div>
-                                <button id="submit-button" type="submit" class="submit-btn">Submit</button>
+                                <button onclick="calculate();" type="submit" class="submit-btn">Submit</button>
                                 <p class="action-left">3 try left</p>
                             </div>
                     </div>
